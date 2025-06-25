@@ -1,21 +1,16 @@
-import os
+# api/index.py
+from flask import Blueprint, jsonify
 import json
-from flask import Flask, render_template, send_from_directory
+import os
 
-app = Flask(__name__, template_folder='../templates')
+api_bp = Blueprint('api', __name__)
 
-# Load resume data
-with open(os.path.join(os.path.dirname(__file__), '../data/resume_data.json')) as f:
-    resume_data = json.load(f)
-
-@app.route('/')
-def home():
-    return render_template('resume.html', data=resume_data)
-
-@app.route('/static/<path:filename>')
-def serve_static(filename):
-    root_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-    return send_from_directory(os.path.join(root_dir, 'static'), filename)
-
-if __name__ == '__main__':
-    app.run(debug=True)
+@api_bp.route('/resume')
+def get_resume():
+    # Get the path to the data file
+    current_dir = os.path.dirname(os.path.abspath(__file__))
+    data_path = os.path.join(current_dir, '../data/resume_data.json')
+    
+    with open(data_path, 'r') as f:
+        resume_data = json.load(f)
+    return jsonify(resume_data)
