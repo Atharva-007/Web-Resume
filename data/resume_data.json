@@ -1,69 +1,74 @@
 {
-    "name": "Your Name",
-    "title": "Your Professional Title",
+    "name": "Atharva Vinayak Gawali",
     "contact": {
-        "location": "City, Country",
-        "phone": "+1 (123) 456-7890",
-        "email": "your.email@example.com",
-        "linkedin": "linkedin.com/in/yourprofile",
-        "github": "github.com/yourusername"
+        "location": "Pune, Maharashtra",
+        "phone": "8624036836",
+        "email": "atharvgawali70@gmail.com",
+        "linkedin": "linkedin.com/in/atharva-gawali",
+        "github": "github.com/Atharva-007"
     },
-    "summary": "A passionate professional with expertise in...",
+    "title": "FULL-STACK CLOUD DEVELOPER",
+    "summary": "AWS-certified developer building scalable applications with 1+ year of hands-on experience in cloud-native solutions and performance optimization.",
     "skills": {
-        "Programming": [
-            "Python",
-            "JavaScript",
-            "Java"
+        "Cloud": [
+            "AWS (EC2, S3, Lambda, RDS)",
+            "Docker",
+            "Firebase"
         ],
-        "Web Development": [
-            "Flask",
-            "React",
-            "HTML/CSS"
+        "Backend": [
+            "Node.js",
+            "Python",
+            "Java",
+            "REST APIs",
+            "MongoDB"
+        ],
+        "Mobile": [
+            "Flutter (Dart)",
+            "React Native",
+            "Nodejs"
         ],
         "DevOps": [
-            "Docker",
-            "AWS",
-            "CI/CD"
+            "CI/CD (GitHub Actions)",
+            "Gitlab",
+            "Git",
+            "Jira"
         ]
     },
     "experience": [
         {
-            "role": "Senior Developer",
-            "company": "Tech Company",
-            "period": "2020 - Present",
-            "points": [
-                "Led team of developers",
-                "Implemented new features",
-                "Optimized performance"
-            ],
-            "technologies": [
-                "Python",
-                "Flask",
-                "AWS"
+            "role": "Full-Stack Developer Intern",
+            "company": "Microspectra Software",
+            "period": "Summer 2023",
+            "details": [
+                "Developed 3 Flutter apps (Firebase backend)",
+                "Built hotel management system (MERN) improving bookings by 40%",
+                "Automated deployments via GitHub Actions (30% faster releases)"
             ]
-        }
-    ],
-    "projects": [
+        },
         {
-            "name": "Project Name",
-            "period": "2023",
-            "points": [
-                "Developed using modern technologies",
-                "Implemented key features"
-            ],
-            "technologies": [
-                "Python",
-                "React",
-                "MongoDB"
+            "role": "Academic Projects",
+            "company": "MIT-ADT University",
+            "details": [
+                "Farmkart: Agri-tech app with AWS cloud integration"
             ]
         }
     ],
     "education": [
         {
-            "degree": "B.Sc in Computer Science",
-            "institution": "University Name",
-            "period": "2016 - 2020",
-            "details": "Graduated with honors"
+            "degree": "B.Tech CSE",
+            "institution": "MIT-ADT University",
+            "period": "2023-2026",
+            "score": "7.5 CGPA"
+        },
+        {
+            "degree": "Diploma in IT",
+            "institution": "Govt. Polytechnic",
+            "period": "2020-2023",
+            "score": "81%"
         }
+    ],
+    "certifications": [
+        "AWS Cloud Practitioner (In Progress)",
+        "Google Cloud Fundamentals (2023)"
     ]
 }

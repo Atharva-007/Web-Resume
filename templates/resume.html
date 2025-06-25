@@ -1,57 +1,41 @@
+<!-- templates/resume.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ data.name }} - Interactive Resume</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="/static/css/resume.css">
+    <title>Atharva Gawali - Resume</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/resume.css') }}">
 </head>
 <body>
     <div class="container">
-        <header class="animate">
-            <img src="/static/images/profile.jpg" alt="Profile Picture" class="profile-pic" id="profilePic">
-            <h1>{{ data.name }}</h1>
-            <div class="title">{{ data.title }}</div>
-            
-            <div class="contact-info">
-                <div class="contact-item animate delay-1">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <span>{{ data.contact.location }}</span>
-                </div>
-                <div class="contact-item animate delay-1">
-                    <i class="fas fa-phone"></i>
-                    <span>{{ data.contact.phone }}</span>
-                </div>
-                <div class="contact-item animate delay-2">
-                    <i class="fas fa-envelope"></i>
-                    <a href="mailto:{{ data.contact.email }}">{{ data.contact.email }}</a>
-                </div>
-                <div class="contact-item animate delay-2">
-                    <i class="fab fa-linkedin"></i>
-                    <a href="https://{{ data.contact.linkedin }}" target="_blank">{{ data.contact.linkedin }}</a>
-                </div>
-                <div class="contact-item animate delay-3">
-                    <i class="fab fa-github"></i>
-                    <a href="https://{{ data.contact.github }}" target="_blank">{{ data.contact.github }}</a>
-                </div>
-            </div>
+        <header>
+            <h1 id="name">Loading resume...</h1>
+            <div class="contact-info" id="contact-info"></div>
+            <h2 id="title"></h2>
+            <p id="summary"></p>
         </header>
-        
-        <!-- Rest of your resume sections (About Me, Skills, Experience, Projects, Education) -->
-        <!-- ... -->
-    </div>
 
-    <div class="floating-btns">
-        <button class="floating-btn download" title="Download PDF">
-            <i class="fas fa-file-pdf"></i>
-        </button>
-        <button class="floating-btn print" title="Print Resume">
-            <i class="fas fa-print"></i>
-        </button>
-    </div>
+        <section class="skills">
+            <h2>TECHNICAL SKILLS</h2>
+            <div id="skills-container"></div>
+        </section>
 
-    <script src="/static/js/resume.js"></script>
+        <section class="experience">
+            <h2>EXPERIENCE</h2>
+            <div id="experience-container"></div>
+        </section>
+
+        <section class="education">
+            <h2>EDUCATION</h2>
+            <div id="education-container"></div>
+        </section>
+
+        <section class="certifications">
+            <h2>CERTIFICATIONS</h2>
+            <ul id="certifications-container"></ul>
+        </section>
+    </div>
+    <script src="{{ url_for('static', filename='js/resume.js') }}"></script>
 </body>
 </html>
