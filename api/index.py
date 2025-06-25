@@ -1,0 +1,22 @@
+from flask import Flask, render_template, send_from_directory
+import os
+import json
+
+app = Flask(__name__)
+
+# Load resume data
+with open(os.path.join(os.path.dirname(__file__), '../data/resume_data.json')) as f:
+    resume_data = json.load(f)
+
+@app.route('/')
+def resume():
+    return render_template('resume.html', data=resume_data)
+
+@app.route('/static/<path:filename>')
+def serve_static(filename):
+    root_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    return send_from_directory(os.path.join(root_dir, 'static'), filename)
+
+# Vercel requirement
+if __name__ == '__main__':
+    app.run(debug=True)
