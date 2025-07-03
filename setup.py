@@ -1,4 +1,5 @@
-from setuptools import setupchmod +x vercel.sh
+from csv import excel
+from setuptools import setup
 
 setup(
     name='resume-app',
