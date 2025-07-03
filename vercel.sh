@@ -1,7 +1,11 @@
 #!/bin/bash
+set -e
 
-# Clean requirements file
-tr -d '\000' < requirements.txt > clean_requirements.txt
+# Check for pip or install Python if needed
+if ! command -v pip &> /dev/null; then
+    echo "Installing Python/pip..."
+    curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
+    python get-pip.py
+fi
 
-# Install dependencies
-pip install --disable-pip-version-check --target . --upgrade -r clean_requirements.txt
+# Rest of your build commands

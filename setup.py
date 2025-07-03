@@ -1,4 +1,4 @@
-from setuptools import setup
+from setuptools import setupchmod +x vercel.sh
 
 setup(
     name='resume-app',
