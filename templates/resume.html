@@ -1,40 +1,17 @@
-<!-- templates/resume.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Atharva Gawali - Resume</title>
+    <title>Atharva Vinayak Gawali - Resume</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/resume.css') }}">
 </head>
 <body>
     <div class="container">
-        <header>
-            <h1 id="name">Loading resume...</h1>
-            <div class="contact-info" id="contact-info"></div>
-            <h2 id="title"></h2>
-            <p id="summary"></p>
-        </header>
-
-        <section class="skills">
-            <h2>TECHNICAL SKILLS</h2>
-            <div id="skills-container"></div>
-        </section>
-
-        <section class="experience">
-            <h2>EXPERIENCE</h2>
-            <div id="experience-container"></div>
-        </section>
-
-        <section class="education">
-            <h2>EDUCATION</h2>
-            <div id="education-container"></div>
-        </section>
-
-        <section class="certifications">
-            <h2>CERTIFICATIONS</h2>
-            <ul id="certifications-container"></ul>
-        </section>
+        <div id="resume-content">
+            <!-- Dynamic resume will be rendered here -->
+            <div class="loading">Loading resume...</div>
+        </div>
     </div>
     <script src="{{ url_for('static', filename='js/resume.js') }}"></script>
 </body>

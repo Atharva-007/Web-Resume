@@ -5,7 +5,7 @@ import os
 
 api_bp = Blueprint('api', __name__)
 
-@api_bp.route('/resume')
+@api_bp.route('/api/resume')
 def get_resume():
     # Get the path to the data file
     current_dir = os.path.dirname(os.path.abspath(__file__))
